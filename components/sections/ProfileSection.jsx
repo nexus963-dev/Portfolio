@@ -74,7 +74,7 @@ export default function ProfileSection() {
           <div className="flex flex-wrap gap-4 mb-8">
             <Button
               variant="primary"
-              href="/resume/Akshat_resume_updated.pdf"
+              href="/resume/Akshat_Jaiswal_Resume.pdf"
               target="_blank"
             >
               <span className="flex items-center gap-2">
