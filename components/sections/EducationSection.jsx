@@ -9,7 +9,7 @@ const educationData = [
     year: "2023 - 2027",
     degree: "Bachelor of Technology in Computer Science",
     institution: "Vellore Institute of Technology Bhopal",
-    details: "CGPA: 8.45/10",
+    details: "CGPA: 8.38/10",
   },
   {
     id: 2,
