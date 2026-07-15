@@ -7,10 +7,14 @@ import { getFeaturedCertificates, getOtherCertificates } from "../../lib/data/ce
 import Image from "next/image";
 
 function CertificateCard({ certificate, featured = false }) {
+  // Determine image sizes based on card width
+  const baseSizes = "(max-width: 768px) 100vw, 320px";
+  const featuredSizes = "(max-width: 768px) 100vw, 600px";
+
   return (
     <motion.div
       className={`group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200/60 dark:border-gray-700/60 shadow-lg transition-all duration-300 ${
-        featured ? "w-full h-[320px]" : "min-w-[280px] w-[280px] sm:min-w-[300px] sm:w-[300px] flex-shrink-0 h-[300px]"
+        featured ? "w-full h-[420px]" : "min-w-[280px] w-[280px] sm:min-w-[300px] sm:w-[300px] flex-shrink-0 h-[380px]"
       }`}
       whileHover={{ scale: 1.03, y: -6 }}
       transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
@@ -23,51 +27,38 @@ function CertificateCard({ certificate, featured = false }) {
           filter: 'blur(1px)',
         }}
       />
-      {/* Certificate Image */}
-      <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 h-40 overflow-hidden">
-        {/* Placeholder */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <svg className="w-16 h-16 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-          </svg>
-        </div>
-        <Image
-          src={certificate.image}
-          alt={certificate.title}
-          fill
-          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-        />
+      {/* Certificate Image - takes most of the card */}
+      <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 h-[260px]">
+        {certificate.image ? (
+          <Image
+            src={certificate.image}
+            alt={certificate.title}
+            fill
+            sizes={featured ? featuredSizes : baseSizes}
+            priority={featured}
+            className="object-contain w-full h-full"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <svg className="w-16 h-16 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 00.806 1.946 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+        )}
         {/* Subtle overlay on hover */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
       </div>
 
-      {/* Content - Flex column with fixed structure */}
-      <div className="p-4 flex flex-col h-[calc(100%-10rem)]">
+      {/* Content - reduced vertical space */}
+      <div className="p-4 flex flex-col">
         <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1 line-clamp-2 break-words">
           {certificate.title}
         </h3>
         <p className="text-blue-600 dark:text-blue-400 text-sm font-medium mb-2 truncate">
           {certificate.issuer}
         </p>
-        {/* Spacer to push footer to bottom */}
-        <div className="flex-grow" />
-        <div className="flex items-center justify-between mt-auto pt-2">
-          <span className="text-sm text-gray-500 dark:text-gray-400">
-            {certificate.year}
-          </span>
-          <motion.a
-            href={certificate.credentialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 flex-shrink-0"
-            whileHover={{ x: 2 }}
-            transition={{ duration: 0.2 }}
-          >
-            Verify
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </motion.a>
+        <div className="mt-auto text-sm text-gray-500 dark:text-gray-400">
+          {certificate.year}
         </div>
       </div>
     </motion.div>

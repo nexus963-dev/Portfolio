@@ -7,23 +7,23 @@ const educationData = [
   {
     id: 1,
     year: "2023 - 2027",
-    degree: "Bachelor of Technology in Computer Science",
-    institution: "Vellore Institute of Technology Bhopal",
-    details: "CGPA: 8.38/10",
+    degree: "Bachelor of Technology in Computer Science Engineering",
+    institution: "Vellore Institute of Technology, Bhopal",
+    details: "CGPA: 8.53/10 | Expected Graduation: May 2027",
   },
   {
     id: 2,
     year: "2023",
-    degree: "Higher Secondary Education",
+    degree: "Class XII (ISC)",
     institution: "St. Joseph's College, Prayagraj",
-    details: "ISC Board. Science stream (PCM) with Computer Science. Scored 89.5%.",
+    details: "Percentage: 91.25%",
   },
   {
     id: 3,
     year: "2021",
-    degree: "Secondary Education",
+    degree: "Class X (ICSE)",
     institution: "St. Joseph's College, Prayagraj",
-    details: "ICSE Board — Completed Secondary Education. Percentage: 94.2%",
+    details: "Percentage: 93.6%",
   },
 ];
 

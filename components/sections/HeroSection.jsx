@@ -89,7 +89,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           >
-            Hello, I&apos;m
+            Hello, I'm
           </motion.p>
 
           <motion.h1
@@ -99,7 +99,7 @@ export default function HeroSection() {
             transition={{ delay: 0.3, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           >
             <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent drop-shadow-sm">
-              Akshat Jaiswal
+              Hardik Agarwal
             </span>
           </motion.h1>
 
@@ -109,8 +109,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           >
-            Building scalable systems that create real-world impact.
-Passionate about clean code, elegant solutions, and solving complex problems with technology.
+            Building innovative solutions at the intersection of AI, web development, and research. Passionate about leveraging technology to solve real-world challenges in education, finance, and agriculture.
           </motion.p>
 
           <motion.div

@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="relative bg-gray-50/80 dark:bg-gray-900/80 backdrop-blur-sm border-t border-gray-200/50 dark:border-gray-800/50">
       {/* Subtle top gradient line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex items-center gap-3">
             <motion.a
-              href="https://github.com/Akshat-1800"
+              href="https://github.com/nexus963-dev"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-2.5 rounded-xl text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white bg-gray-100/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-700 border border-transparent hover:border-gray-200/80 dark:hover:border-gray-700/80 hover:shadow-lg hover:shadow-gray-900/5 dark:hover:shadow-black/20 transition-all duration-300"
@@ -39,7 +39,7 @@ export default function Footer() {
             </motion.a>
 
             <motion.a
-              href="https://www.linkedin.com/in/akshat-jaiswal-3b513b28a"
+              href="https://www.linkedin.com/in/hardik-agarwal-672514278/"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-2.5 rounded-xl text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 bg-gray-100/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-700 border border-transparent hover:border-gray-200/80 dark:hover:border-gray-700/80 hover:shadow-lg hover:shadow-blue-500/10 dark:hover:shadow-blue-500/20 transition-all duration-300"
@@ -62,7 +62,7 @@ export default function Footer() {
               <span className="font-medium bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">Tailwind CSS</span>
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
-              © {currentYear} All rights reserved.
+              © {currentYear} Hardik Agarwal All rights reserved.
             </p>
           </div>
         </div>

@@ -15,7 +15,7 @@ function FeaturedProjectCard({ project }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-      whileHover={{ 
+      whileHover={{
         boxShadow: "0 0 0 1px rgba(59, 130, 246, 0.1), 0 0 40px -10px rgba(59, 130, 246, 0.2), 0 25px 50px -12px rgba(0, 0, 0, 0.15)"
       }}
     >
@@ -29,6 +29,8 @@ function FeaturedProjectCard({ project }) {
               src={project.image}
               alt={project.title}
               fill
+              sizes="(max-width: 768px) 100vw, 800px"
+              priority={true}
               className="object-cover"
             />
           ) : (
@@ -113,7 +115,7 @@ function ProjectCard({ project, index }) {
       onClick={handleInteraction}
       whileHover={{ scale: 1.03, y: -6 }}
       style={{
-        boxShadow: isHovered 
+        boxShadow: isHovered
           ? "0 0 0 1px rgba(59, 130, 246, 0.15), 0 0 30px -5px rgba(59, 130, 246, 0.15), 0 25px 50px -12px rgba(0, 0, 0, 0.2)"
           : undefined
       }}
@@ -126,6 +128,7 @@ function ProjectCard({ project, index }) {
           src={project.image}
           alt={project.title}
           fill
+          sizes="(max-width: 768px) 100vw, 400px"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       ) : (
@@ -176,8 +179,7 @@ function ProjectCard({ project, index }) {
                   className="px-2 py-0.5 text-xs font-medium text-blue-400 bg-blue-500/20 rounded"
                 >
                   {tech}
-                </span>
-              ))}
+                </span>))}
               {project.techStack.length > 3 && (
                 <span className="px-2 py-0.5 text-xs font-medium text-gray-400">
                   +{project.techStack.length - 3} more
@@ -244,7 +246,7 @@ export default function ProjectsSection() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] sm:w-[600px] h-[250px] sm:h-[400px] bg-blue-500/5 dark:bg-blue-500/10 rounded-full blur-2xl sm:blur-3xl" />
       </div>
-      
+
       <SectionHeader
         title="Projects"
         subtitle="A selection of my recent work and side projects"
@@ -252,7 +254,6 @@ export default function ProjectsSection() {
 
       {/* Featured Project */}
       {featuredProject && <FeaturedProjectCard project={featuredProject} />}
-
       {/* Projects Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {otherProjects.map((project, index) => (

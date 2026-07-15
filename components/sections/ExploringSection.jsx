@@ -6,39 +6,33 @@ import { SectionWrapper, SectionHeader } from "../ui/Section";
 const exploringItems = [
   {
     id: 1,
-    name: "Data Structures & Algorithms",
-    description: "Efficient coding patterns and problem-solving techniques",
-    icon: "📚",
+    name: "Emerging Technologies",
+    description: "Exploring cutting-edge advancements in AI/ML, Generative AI, LLMs, and latest research trends",
+    icon: "🚀",
   },
   {
     id: 2,
-    name: "Machine Learning",
-    description: "Deep learning and neural networks",
-    icon: "🤖",
+    name: "Competitive Programming",
+    description: "Active participation in coding challenges on platforms like LeetCode to sharpen problem-solving skills",
+    icon: "💻",
   },
   {
     id: 3,
-    name: "AWS & Cloud Computing",
-    description: "Scalable infrastructure and cloud services",
-    icon: "☁️",
+    name: "Web Development",
+    description: "Building full-stack applications with modern frameworks like Next.js, React, and Node.js",
+    icon: "🌐",
   },
   {
     id: 4,
-    name: "Blockchain",
-    description: "Decentralized applications",
-    icon: "⛓️",
+    name: "Research Areas",
+    description: "Focusing on causal inference, time series forecasting, and application of ML in finance & agriculture",
+    icon: "🔬",
   },
   {
     id: 5,
-    name: "System Design",
-    description: "Distributed systems architecture",
-    icon: "🏗️",
-  },
-  {
-    id: 6,
-    name: "WebRTC & Real-Time Communication",
-    description: "Building real-time applications",
-    icon: "📡",
+    name: "Cloud & DevOps",
+    description: "Working with AWS, Docker, Kubernetes, and CI/CD pipelines for scalable deployment",
+    icon: "☁️",
   },
 ];
 
@@ -49,7 +43,7 @@ export default function ExploringSection() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute bottom-1/4 right-1/4 w-[300px] sm:w-[500px] h-[200px] sm:h-[300px] bg-purple-500/5 dark:bg-purple-500/10 rounded-full blur-2xl sm:blur-3xl" />
       </div>
-      
+
       <SectionHeader
         title="Currently Exploring"
         subtitle="Technologies and concepts I'm actively learning"
@@ -64,8 +58,8 @@ export default function ExploringSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1, ease: [0.4, 0, 0.2, 1] }}
-            whileHover={{ 
-              scale: 1.03, 
+            whileHover={{
+              scale: 1.03,
               y: -6,
               boxShadow: "0 0 0 1px rgba(59, 130, 246, 0.1), 0 0 25px -10px rgba(59, 130, 246, 0.12), 0 20px 40px -15px rgba(0, 0, 0, 0.1)"
             }}
@@ -73,7 +67,7 @@ export default function ExploringSection() {
             {/* Hover glow */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             <div className="relative flex items-start gap-4">
-              <motion.span 
+              <motion.span
                 className="text-3xl group-hover:scale-110 transition-transform duration-300"
                 whileHover={{ scale: 1.2, rotate: 5 }}
               >

@@ -34,7 +34,7 @@ export default function ProfileSection() {
               {/* Image container */}
               <div className="relative w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 rounded-3xl overflow-hidden border-4 border-white/80 dark:border-gray-800/80 shadow-2xl shadow-gray-900/10 dark:shadow-black/30">
                 <Image
-                  src="https://res.cloudinary.com/djozpdgv1/image/upload/f_auto,q_auto,w_800/v1770473887/Portfolio_img_hhrnza.png"
+                  src="https://res.cloudinary.com/dfdoggzdy/image/upload/v1784086245/Gemini_Generated_Image_29oxdl29oxdl29ox_mbfuxt.png"
                   alt="Profile"
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"
@@ -60,13 +60,13 @@ export default function ProfileSection() {
 
           <div className="space-y-4 text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8 w-full max-w-full break-words overflow-wrap-anywhere hyphens-auto">
             <p className="w-full break-words">
-              I'm a full-stack developer passionate about building scalable applications and reliable software systems that perform efficiently in real-world environments. Enjoys solving complex engineering challenges and transforming ideas into clean, well-structured, production-ready solutions. Strongly values teamwork and collaborative development, with a focus on designing and building systems that are both practical and impactful.
+              I'm a B.Tech Computer Science Engineering student at Vellore Institute of Technology, Bhopal, with a strong foundation in computer science fundamentals and hands-on experience in research, full-stack development, and machine learning. Passionate about leveraging technology to solve real-world challenges in education, finance, and agriculture through innovative applications of AI, web development, and causal inference techniques.
             </p>
             <p className="w-full break-words">
-              Currently focused on developing high-performance applications using modern technologies such as Next.js, JavaScript, and cloud-native architectures. Actively leverages AI tools during development to enhance productivity, accelerate problem-solving, and create smarter, more efficient solutions while maintaining strong engineering fundamentals and clean, maintainable code.
+              Currently focused on applying machine learning and deep learning techniques to real-world problems, with experience in research at MNNIT Allahabad and development of full-stack applications. Actively exploring advanced topics in causal inference, generative AI, and scalable system design while maintaining strong software engineering practices.
             </p>
             <p className="w-full break-words">
-              Beyond coding, interests include playing cricket, exploring new technologies, and learning about emerging AI tools to continuously strengthen technical knowledge and problem-solving capabilities.
+              Beyond academics and research, interests include exploring emerging technologies, participating in coding challenges on platforms like LeetCode, and staying updated with the latest developments in AI/ML, web technologies, and computer science research.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ export default function ProfileSection() {
           <div className="flex flex-wrap gap-4 mb-8">
             <Button
               variant="primary"
-              href="/resume/Akshat_Jaiswal_Resume_SDE.pdf"
+              href="/resume/Hardik_Agarwal_Resume.pdf"
               target="_blank"
             >
               <span className="flex items-center gap-2">
